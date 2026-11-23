@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Clock Tower: The First Fear (fan translation)",
+    "id": "SLPS-00917",
+    "boot_exe": "SLPS_009.17"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Japan",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Clock Tower - The First Fear (T).cue",
+    "bin_name": "Clock Tower - The First Fear (T) (Track 1).bin",
+    "track_counts": [
+      2
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 75750864,
+      "md5": "83adf3cdb6c46b3e084dec6dfb213295",
+      "sha1": "f20aaf6d52ba2acee483445a8039b85e6f1492d4",
+      "crc32": "f3ced589"
+    },
+    "disc_fp": "90e863b29c7dab6140aabe0f40d064a97a2a7f6f2a8d393abaad7fbcfd4b6698"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x80027B44",
+    "text_size": "0x001C1800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 737,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "clock-tower-the-first-fear-psx",
+  "name": "Clock Tower: The First Fear (fan translation)",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "clock-tower-the-first-fear-recomp",
+  "rom_identity": {
+    "crc32": [
+      "f3ced589"
+    ],
+    "md5": [
+      "83adf3cdb6c46b3e084dec6dfb213295"
+    ],
+    "sha1": [
+      "f20aaf6d52ba2acee483445a8039b85e6f1492d4"
+    ],
+    "disc_serials": [
+      "SLPS-00917"
+    ],
+    "sizes": [
+      75750864
+    ],
+    "filenames": [
+      "Clock Tower - The First Fear (T).cue",
+      "Clock Tower - The First Fear (T) (Track 1).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "disc_fps": [
+      "90e863b29c7dab6140aabe0f40d064a97a2a7f6f2a8d393abaad7fbcfd4b6698"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5500.BIN",
+    "profile": "SCPH5500",
+    "crc32": [
+      "ff3eeb8c"
+    ],
+    "md5": [
+      "8dd7d5296a650fac7319bce665a6a53c"
+    ],
+    "sha1": [
+      "b05def971d8ec59f346f2d9ac21fb742e3eb6917"
+    ],
+    "sha256": [
+      "9c0421858e217805f4abe18698afea8d5aa36ff0727eb8484944e00eb5e7eadb"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5500.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/clock-tower-the-first-fear-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "clock-tower-the-first-fear-*-windows-x64.zip",
+      "linux-x64": "clock-tower-the-first-fear-*-linux-x64.zip",
+      "macos-arm64": "clock-tower-the-first-fear-*-macos-arm64.zip",
+      "macos-x64": "clock-tower-the-first-fear-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "clock_tower_the_first_fear.exe",
+    "linux": "clock_tower_the_first_fear",
+    "macos": "clock_tower_the_first_fear"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/clock-tower-the-first-fear-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

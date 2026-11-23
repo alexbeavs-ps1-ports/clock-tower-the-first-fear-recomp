@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Clock Tower: The First Fear (fan translation)"
+id = "SLPS-00917"
+players = 1
+exe = "disc/SLPS_009.17"
+disc = "disc/Clock Tower - The First Fear (T).cue"
+discs = ["disc/Clock Tower - The First Fear (T).cue"]
+disc_serials = ["SLPS-00917"]
+load_address = "0x80010000"
+entry_pc = "0x80027B44"
+text_size = "0x001C1800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Clock Tower - The First Fear (T) (Track 1).bin"
+cue_name = "Clock Tower - The First Fear (T).cue"
+boot_exe = "SLPS_009.17"
+known_sizes = [75750864]
+known_md5 = [
+  "83adf3cdb6c46b3e084dec6dfb213295",
+]
+known_sha1 = [
+  "f20aaf6d52ba2acee483445a8039b85e6f1492d4",
+]
+known_crc32 = [
+  "f3ced589",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5500.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Clock Tower: The First Fear (fan translation) Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "90e863b29c7dab6140aabe0f40d064a97a2a7f6f2a8d393abaad7fbcfd4b6698"
